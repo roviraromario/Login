@@ -1,6 +1,4 @@
 logearse = "si"
-tiene_arroba = 0
-tiene_punto = 0
 while logearse == "si":
     nombre_de_usuario = input("Escibre tu nombre de usuario: ")
 
@@ -12,13 +10,9 @@ while logearse == "si":
                 print("no puede comenzar con arroba")
             if correo.startswith("."):
                 print("no puede comenzar con punto")
-            if "@"  in caracteres:
-                tiene_arroba += 1
-            if "."  in caracteres:
-                tiene_punto += 1
 
-        if tiene_arroba > 1 or tiene_punto > 1:
-                print("no puede haber mas de un @ o .")
+        if correo.count("@") > 1 or correo.count(".") > 1 or correo.count("@") == 0 or correo.count(".") == 0:
+                print("tu correo debe tener un @ o .")
         if "@." in correo:
                 print("no puede haber @. juntos")
 
@@ -30,7 +24,6 @@ while logearse == "si":
     con_caracter_especial = 0
     con_numero =0
     con_mayuscula = 0
-
     
     if len(contraseña_de_usuario) >= 8:
         print("tiene 8 caracteres")
@@ -53,4 +46,3 @@ while logearse == "si":
     else:
         print("tu contraseña no tiene 8 caracteres")
         logearse = input("quieres volver a logearte: ")
-
