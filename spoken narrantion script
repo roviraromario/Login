@@ -1,22 +1,24 @@
 This program is a Python login system.
 The variable "login" is used to repeat the program.
 
-The program asks the user for a username and an email.
+The program asks the user for a username and a correo.
 The variable "correo" is the email entered by the user.
 
-The program checks the email.
-It verifies if the email has "@" and ".".
-It also checks if the email starts with invalid characters.
+The program checks the correo.
+It verifies if the correo has "@" and ".".
+It also checks if the correo starts with invalid characters like "@" or ".".
+The program also checks if the correo has enough characters.
 
-Now the program is validating the email.
+Now the program is validating the correo format.
 
 Then the program asks the user for a password.
-The variable "usar_password" is the password of the user.
+The variable "user_password" is the password of the user.
 
 The program checks if the password has at least eight characters.
-It checks if the password contains numbers and uppercase letters.
+It also verifies if the password contains numbers, uppercase letters, and special characters.
 
-Now the system is analyzing the password.
+Now the system is analyzing each character of the password.
 
-Finally, the program prints messages.
-If the password is correct, the user can enter the system.
+Finally, the program prints messages depending on the result.
+If the password meets the conditions, the user can enter the system.
+If the password is not valid, the program shows an error message and asks the user to try again.
