@@ -1,5 +1,5 @@
 This program is a Python login system.
-The variable "logearse" is used to repeat the program.
+The variable "login" is used to repeat the program.
 
 The program asks the user for a username and an email.
 The variable "correo" is the email entered by the user.
@@ -11,7 +11,7 @@ It also checks if the email starts with invalid characters.
 Now the program is validating the email.
 
 Then the program asks the user for a password.
-The variable "contraseña_de_usuario" is the password of the user.
+The variable "usar_password" is the password of the user.
 
 The program checks if the password has at least eight characters.
 It checks if the password contains numbers and uppercase letters.
