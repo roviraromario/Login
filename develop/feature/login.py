@@ -1,48 +1,59 @@
-logearse = "si"
-while logearse == "si":
-    nombre_de_usuario = input("Escibre tu nombre de usuario: ")
+login = "yes"
 
-    correo = input("Escibre tu correo: ")
+while login == "yes":
+    username = input("Write your username: ")
 
-    if len(correo) >= 4:
-        for caracteres in correo:
-            if correo.startswith("@"):
-                print("no puede comenzar con arroba")
-            if correo.startswith("."):
-                print("no puede comenzar con punto")
+    email = input("Write your email: ")
 
-        if correo.count("@") > 1 or correo.count(".") > 1 or correo.count("@") == 0 or correo.count(".") == 0:
-                print("tu correo debe tener un @ o .")
-        if "@." in correo:
-                print("no puede haber @. juntos")
+    if len(email) >= 4:
+        for character in email:
+            if email.startswith("@"):
+                print("email cannot start with @")
+            if email.startswith("."):
+                print("email cannot start with dot")
+
+        if email.count("@") > 1 or email.count(".") > 1 or email.count("@") == 0 or email.count(".") == 0:
+            print("your email must contain @ and .")
+
+        if "@." in email:
+            print("@ and . cannot be together")
 
     else:
-        print("tiene que tener minimo 4 carracteres")
+        print("email must have at least 4 characters")
 
-    contraseña_de_usuario = input(f"Escribe tu contraseña {nombre_de_usuario}: ")
+    user_password = input(f"Write your password {username}: ")
 
-    con_caracter_especial = 0
-    con_numero =0
-    con_mayuscula = 0
-    
-    if len(contraseña_de_usuario) >= 8:
-        print("tiene 8 caracteres")
-        for contraseña in contraseña_de_usuario:    
-            if contraseña.isdigit():
-                con_numero += 1
-            if contraseña.isupper():
-                con_mayuscula += 1
-            if contraseña.isalnum():
-                con_caracter_especial += 1
-        if con_numero == 0:
-            print("no tienes numeros en tu contraseña")
-        elif con_mayuscula == 0:
-            print("no tienes mayusculas en tu contraseña")
-        elif con_caracter_especial == 0:
-            print("no tienes caracteres especiales en tu contraseña")
+    has_special_character = 0
+    has_number = 0
+    has_uppercase = 0
+
+    if len(user_password) >= 8:
+        print("password has 8 characters")
+
+        for password in user_password:
+            if password.isdigit():
+                has_number += 1
+
+            if password.isupper():
+                has_uppercase += 1
+
+            if password.isalnum():
+                has_special_character += 1
+
+        if has_number == 0:
+            print("your password does not contain numbers")
+
+        elif has_uppercase == 0:
+            print("your password does not contain uppercase letters")
+
+        elif has_special_character == 0:
+            print("your password does not contain special characters")
+
         else:
-            print("entra")
-        logearse = "no"
+            print("login successful")
+
+        login = "no"
+
     else:
-        print("tu contraseña no tiene 8 caracteres")
-        logearse = input("quieres volver a logearte: ")
+        print("your password does not have 8 characters")
+        login = input("do you want to try again: ")
