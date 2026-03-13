@@ -3,23 +3,23 @@ login = "yes"
 while login == "yes":
     username = input("Write your username: ")
 
-    email = input("Write your email: ")
+    correo = input("Write your correo: ")
 
-    if len(email) >= 4:
-        for character in email:
-            if email.startswith("@"):
-                print("email cannot start with @")
-            if email.startswith("."):
-                print("email cannot start with dot")
+    if len(correo) >= 4:
+        for character in correo:
+            if correo.startswith("@"):
+                print("correo cannot start with @")
+            if correo.startswith("."):
+                print("correo cannot start with dot")
 
-        if email.count("@") > 1 or email.count(".") > 1 or email.count("@") == 0 or email.count(".") == 0:
-            print("your email must contain @ and .")
+        if correo.count("@") > 1 or correo.count(".") > 1 or correo.count("@") == 0 or correo.count(".") == 0:
+            print("your correo must contain @ and .")
 
-        if "@." in email:
+        if "@." in correo:
             print("@ and . cannot be together")
 
     else:
-        print("email must have at least 4 characters")
+        print("correo must have at least 4 characters")
 
     user_password = input(f"Write your password {username}: ")
 
